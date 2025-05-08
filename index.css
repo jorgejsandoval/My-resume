@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro {
+    height: 100vh;        /* ocupa toda la pantalla */
+    background-color: black;
+}
+
+#intro h1 {
+    font-size: 9em;
+    color: white;
+    margin: 0;
+    left: 50vw;
+    top: 30vh;
+}
+
+#intro p {
+    position: relative;
+    left: 40vw;
+    top: 30vh;
+    margin: 0;
+    font-size: 1.8em;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+    justify-content: center;
+}
+
+#intro p {
+    font-size: 1.5rem;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    
+}
+
+#intro h1.hidden{
+    opacity: 0;
+    transform: translateY(-1em);
+    
+}
+
+.visible{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s ease-out;
+}
+
+#intro h1.visible{
+    opacity: 1;
+    position: relative;
+    transform: translateY(0);
+    transition: all 1s linear;
+}
+
+#intro p.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+#intro p.visible{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s ease-out;
+}
+
+/************/
+
+@media screen and (max-width: 800px) {
+
+    #intro p {
+        font-size: 1rem;
+    }
+
+    #intro h1 {
+        font-size: 5em;
+    }
+
+    #intro h1 {
+        left: 30vw;
+    }
+
+    #intro p {
+        left: 18vw;
+    }
+}
+
+
+
